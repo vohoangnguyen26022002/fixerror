@@ -1,0 +1,149 @@
+.container {
+  /* padding: 20px; */
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.5em;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.imageGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.imageItem {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  width: 180px;
+  background: #f9f9f9;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.imageItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.imageId {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.image {
+  width: 130px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.noImage {
+  font-size: 0.9em;
+  color: #888;
+}
+
+/* .image:hover {
+    transform: scale(1.1);
+  } */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: hidden;
+}
+
+.modalImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.closeButton:hover {
+  background: #ff2f2f;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.pagination button:disabled {
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
+.pagination .activePage {
+  background-color: #4b9cd3;
+  color: white;
+  font-weight: bold;
+}
+
+.pagination .inactivePage {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.pagination button:hover:not(.activePage):not(:disabled) {
+  background-color: #d3e4f4;
+}
+
+@media (max-width: 600px) {
+  .imageItem {
+    width: 100%;
+    max-width: 150px;
+  }
+}

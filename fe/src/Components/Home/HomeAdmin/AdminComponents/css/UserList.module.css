@@ -1,0 +1,185 @@
+/* UserList.module.css */
+.userTableContainer {
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 100%;
+  background-color: white;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.userTable {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+
+.userTable th:nth-child(4),
+.userTable td:nth-child(4) {
+  width: 100px;
+}
+
+.userTable th,
+.userTable td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.userTable th {
+  background-color: #f4f4f4;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+.idfingerInputRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.idfingerInput {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.idfingerInput .placeholder {
+  font-size: 100px;
+}
+
+.deleteButton {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #e07a5f;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.deleteButton:hover {
+  background-color: #d0604d;
+}
+
+@media (max-width: 768px) {
+  .userTable {
+    font-size: 0.9rem;
+  }
+
+  .userTable th,
+  .userTable td {
+    padding: 8px;
+  }
+
+  .idfingerInputRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .idfingerInput {
+    margin-bottom: 10px;
+  }
+
+  .deleteButton {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .userTable th,
+  .userTable td {
+    font-size: 0.8rem;
+  }
+
+  .userTable th {
+    padding: 6px;
+  }
+
+  .userTable td {
+    padding: 3px;
+  }
+
+  .idfingerInput {
+    width: 100%;
+  }
+
+  .deleteButton {
+    padding: 6px 10px;
+  }
+}
+
+/* @media (max-width: 375px) {
+    .userTable th, .userTable td {
+        font-size: 0.1rem;
+    }
+
+    .userTable th {
+        padding: 10px;
+    }
+
+    .userTable td {
+        padding: 6px;
+    }
+
+    .idfingerInput {
+        width: 100%;
+    }
+
+    .deleteButton {
+        padding: 6px 10px;
+    }
+} */

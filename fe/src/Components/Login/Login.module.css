@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #003366, #c0c0c0);
+  padding: 20px;
+}
+
+.loginTitle {
+  font-size: 36px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.label {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+  width: 100%;
+  margin-left: 10px;
+}
+
+.input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 17px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.button {
+  padding: 16px;
+  background-color: #0476f0;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.loginRegister {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  font-size: 23px;
+  color: #dadada;
+}
+
+.loginRegisterLink {
+  color: #260c0c;
+  text-decoration: none;
+  font-size: 23px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.forgotPasswordLink {
+  color: #730d0d;
+  text-decoration: none;
+  padding-top: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.loginRegisterLink:hover {
+  color: #003d83;
+  text-decoration: underline;
+}
+
+.forgotPasswordLink:hover,
+.loginRegisterLink:hover {
+  color: #003d83;
+  text-decoration: underline;
+}
+
+.input::placeholder {
+  font-size: 16px;
+  color: #424242;
+  font-style: italic;
+  opacity: 0.7;
+  transition: color 0.3s ease;
+}
+
+.input:focus::placeholder {
+  color: #b5739f;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 14px;
+  margin-top: 8px;
+}
